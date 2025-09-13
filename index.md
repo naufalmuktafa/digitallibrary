@@ -6,7 +6,7 @@ Berikut ini adalah koleksi yang dimiliki:
 
 ## koleksi
 1. [Aplikasi Teeknologi Informasi: Teori dan Implementasi](ebook/RUNDOWN FIX FINAL PANITIA.PDF) - Muti A, Purba, dkk (2025)
-2. [Bijak dan Cerdas Mengelola Sampah](ebook/Bijak dan cerdas mengolah sampah.pdf) - Teti Suryati (2018)
+2. [Bijak dan Cerdas Mengelola Sampah](ebook/ebook/Bijak dan cerdas mengelola sampah.pdf) - Teti Suryati (2018)
 3. [Tips Memilih Tema Skripsi](ebook/Tips Memilih Tema Skripsi.pdf) - Hani Halifudin (2012)
 4. [Panduan Praktis Cetak Sablon](ebook/panduan praktis cetak sablon.pdf) - Guntur Nusantara (2006)
 5. [Akses Internet Gratis dengan Antena Kaleng](ebook/Akses Internet Gratis dengan Antena Kaleng.pdf) - Noesapati (2012)
