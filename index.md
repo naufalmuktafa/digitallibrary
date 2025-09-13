@@ -13,7 +13,7 @@ Berikut ini adalah koleksi yang dimiliki:
 6. [Dasar Perencanaan Rumah Tinggal](ebook/Dasar Perencanaan Rumah Tinggal.pdf) - Tutu Suriwiyono (2003)
 7. [Membuat Miniatur Air Terjun](ebook/Membuat Miniatur Air Terjun.pdf) - Murhananto (2002)
 8. [Sumur Resapan](ebook/Sumur Resapan.pdf) - Kusnaedi (2011)
-9. [Rahasia Membuat Mesin Tetas.pdf](ebook/Rahasia membuat mesin tetas.pdf) - Teti Suryati (2025)
+9. [Rahasia Membuat Mesin Tetas.pdf](ebook/Rahasia membuat mesin tetas.pdf) - Rudi Hermawan (2010)
 10. [Babad Majapahit.pdf](ebook/Babad Majapahit.pdf) - Proyek Benerbitan Buku sastra Indonesia dan Daerah (2012)
 11. [Resume Perpustakaan VR](ebook/VR PERPUSTAKAAN.pdf) - Naufal Muktafa M (2025)
 
