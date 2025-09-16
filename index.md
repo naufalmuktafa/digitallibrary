@@ -17,6 +17,6 @@ Berikut ini adalah koleksi yang dimiliki:
 10. [Babad Majapahit](ebook/Babad Majapahit.pdf) - Kadir Tisna Sujana (2011)
 11. [Resume Perpustakaan VR](ebook/VR PERPUSTAKAAN.pdf) - Naufal Muktafa M (2025)
 
-
+[Halaman 1](webti/halaman1.html)
 *Powered by GitHub Pages*
 
