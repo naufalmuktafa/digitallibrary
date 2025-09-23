@@ -1,104 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .chat-container {
-            width: 300px;
-            height: 400px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .chat-box {
-            flex: 1;
-            padding: 10px;
-            overflow-y: auto;
-        }
-        .chat-input {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
-        .chat-input button {
-            padding: 10px;
-            border: none;
-            background: blue;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot dengan Header</title>
+<style>
+	<style>
+    body {
+      background-image: url ('bgnn.JPG');
+      background-size: contain;
+      margin: 0; 
+      padding: 0;
+		}
+        margin: 0; /* hilangkan margin bawaan */
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column; /* susun vertikal: header → konten */
+        min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        background: #4a90e2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* ===== AREA KONTEN ===== */
+    .page-content {
+        flex: 1; /* isi sisa tinggi halaman */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* ===== CHAT CONTAINER ===== */
+    .chat-container {
+        width: 300px;
+        height: 400px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .chat-box {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .chat-input {
+        display: flex;
+        border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .chat-input button {
+        padding: 10px;
+        border: none;
+        background: blue;
+        color: white;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
+
+    <!-- ===== HEADER DI ATAS ===== -->
+    <header>
+		<a href="hal1.html">Bio orang Tulus</a>|
+		<a href="hal2.html">Penerapan TI</a>|
+		<a href="hal3.html">Kesan & Pesan</a>|
+		<a href="hal4.html">Game</a>|
+		<a href="hal5.html">Testgithub</a>|
+		<a href="hal6.html">Testgithub2</a>|
+		<a href="hal7.html">Testgithub3</a>|
+		<a href="https://gilangwibowo89.github.io/digitallibrary/">Index</a>
+    </header>
+
+    <!-- ===== CHATBOT BERADA DI BAWAH HEADER ===== -->
+    <div class="page-content">
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
 
-    <script>
-        function sendMessage() {
-            const chatBox = document.getElementById("chat-box");
-            const userInput = document.getElementById("user-input");
-            const message = userInput.value.trim();
+<script>
+function sendMessage() {
+    const chatBox = document.getElementById("chat-box");
+    const userInput = document.getElementById("user-input");
+    const message = userInput.value.trim();
+    if (message === "") return;
 
-            if (message === "") return;
+    // User message
+    const userMessage = document.createElement("div");
+    userMessage.textContent = "You: " + message;
+    chatBox.appendChild(userMessage);
 
-            // Add user message
-            const userMessage = document.createElement("div");
-            userMessage.textContent = "You: " + message;
-            chatBox.appendChild(userMessage);
+    // Simulate bot response
+    setTimeout(() => {
+        const botMessage = document.createElement("div");
+        botMessage.textContent = "Bot: " + getBotResponse(message);
+        chatBox.appendChild(botMessage);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }, 1000);
 
-            // Simulate bot response
-            setTimeout(() => {
-                const botMessage = document.createElement("div");
-                botMessage.textContent = "Bot: " + getBotResponse(message);
-                chatBox.appendChild(botMessage);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 1000);
+    userInput.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-            userInput.value = "";
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
+function getBotResponse(input) {
+    const responses = {
+        "hai": "Hai juga!",
+        "bagaimana kabarmu?": "aku baik-baik saja",
+        "siapa namamu?": "aku chat boot"
+    };
+    return responses[input.toLowerCase()] || "Maaf saya tidak tau";
+}
+</script>
 
-        function getBotResponse(input) {
-            const responses = {
-                "hai": "Hai juga!",
-                "bagaimana kabarmu?": "aku baik-baik saja",
-                "siapa namamu?": "aku chat boot"
-            };
-            return responses[input.toLowerCase()] || "Maaf saya tidak tau";
-        }
-    </script>
 </body>
 </html>
-
-<hr>
-<a href="halaman1.html">Halaman 1</a>|
-<a href="halaman2.html">Halaman 2</a>|
-<a href="halaman3.html">Halaman 3</a>|
-<a href="halaman4.html">Halaman 4</a>
-<a href="halaman4.html">Halaman 5</a>
-<a href="halaman4.html">Halaman 6</a>
-<a href="halaman4.html">Halaman 7</a>
-<hr>
